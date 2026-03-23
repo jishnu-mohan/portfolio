@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0a0a0a;
+  --color-background-end: #1a1a2e;
+  --color-foreground: #f1f5f9;
+  --color-foreground-secondary: #94a3b8;
+  --color-foreground-muted: #64748b;
+  --color-accent: #6366f1;
+  --color-accent-light: #818cf8;
+  --color-accent-violet: #8b5cf6;
+  --color-card-bg: rgba(255, 255, 255, 0.03);
+  --color-card-border: rgba(255, 255, 255, 0.06);
+  --color-glass-bg: rgba(10, 10, 10, 0.6);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+}
+
+::selection {
+  background: rgba(99, 102, 241, 0.3);
+  color: #f1f5f9;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
