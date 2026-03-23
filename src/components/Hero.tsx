@@ -203,17 +203,6 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <style jsx global>{`
-        @keyframes drift {
-          0%,
-          100% {
-            transform: translate(0, 0);
-          }
-          50% {
-            transform: translate(30px, -20px);
-          }
-        }
-      `}</style>
     </section>
   );
 }
