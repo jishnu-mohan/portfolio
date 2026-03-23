@@ -21,10 +21,6 @@ export default function Contact() {
           <h2 className="text-3xl font-bold text-[#f1f5f9] mb-3">
             Let&apos;s Work Together
           </h2>
-          {/* <p className="text-[#94a3b8] text-base mb-10">
-            Always open to discussing new opportunities and interesting
-            projects.
-          </p> */}
         </motion.div>
 
         <motion.div

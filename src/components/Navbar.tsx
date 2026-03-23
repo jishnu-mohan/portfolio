@@ -121,9 +121,10 @@ export default function Navbar() {
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
             className="md:hidden bg-[rgba(10,10,10,0.95)] backdrop-blur-xl border-b border-white/[0.06]"
           >
             <div className="px-6 py-4 flex flex-col gap-4">

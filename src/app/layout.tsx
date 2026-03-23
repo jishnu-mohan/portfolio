@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="antialiased overflow-x-hidden">{children}</body>
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
