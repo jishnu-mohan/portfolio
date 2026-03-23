@@ -93,25 +93,27 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="block md:hidden p-2"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`block w-5 h-0.5 bg-[#e2e8f0] transition-transform duration-200 ${
-              mobileOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-[#e2e8f0] transition-opacity duration-200 ${
-              mobileOpen ? "opacity-0" : ""
-            }`}
-          />
-          <span
-            className={`block w-5 h-0.5 bg-[#e2e8f0] transition-transform duration-200 ${
-              mobileOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          />
+          <div className="flex flex-col gap-[5px]">
+            <span
+              className={`block w-6 h-[2px] bg-[#e2e8f0] transition-transform duration-200 ${
+                mobileOpen ? "rotate-45 translate-y-[7px]" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-[2px] bg-[#e2e8f0] transition-opacity duration-200 ${
+                mobileOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`block w-6 h-[2px] bg-[#e2e8f0] transition-transform duration-200 ${
+                mobileOpen ? "-rotate-45 -translate-y-[7px]" : ""
+              }`}
+            />
+          </div>
         </button>
       </div>
 
