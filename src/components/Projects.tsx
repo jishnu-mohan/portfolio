@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import { projects } from "@/data/portfolio";
 
 const icons: Record<string, React.ReactNode> = {
@@ -67,6 +68,8 @@ const icons: Record<string, React.ReactNode> = {
 };
 
 export default function Projects() {
+  const [expanded, setExpanded] = useState<string | null>(null);
+
   return (
     <section id="projects" className="py-24 relative">
       <div className="absolute -bottom-16 -left-10 w-[250px] h-[250px] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.06),transparent_70%)]" />
@@ -88,44 +91,110 @@ export default function Projects() {
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.title}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
-              className="group bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 relative overflow-hidden hover:border-white/[0.12] hover:-translate-y-1 transition-all duration-300"
-            >
-              {/* Corner gradient */}
-              <div className="absolute -top-5 -right-5 w-20 h-20 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.08),transparent)] group-hover:bg-[radial-gradient(circle,rgba(99,102,241,0.15),transparent)] transition-all duration-300" />
+          {projects.map((project, i) => {
+            const isExpanded = expanded === project.title;
+            const hasDetails = project.challenge && project.approach && project.outcome;
 
-              <div className="relative">
-                <div className="text-[#818cf8] mb-4">
-                  {icons[project.icon]}
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: i * 0.1, duration: 0.5 }}
+                className={`group bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 relative overflow-hidden hover:border-white/[0.12] transition-all duration-300 ${
+                  hasDetails ? "cursor-pointer" : ""
+                } ${isExpanded ? "border-white/[0.12]" : "hover:-translate-y-1"}`}
+                onClick={() => {
+                  if (hasDetails) {
+                    setExpanded(isExpanded ? null : project.title);
+                  }
+                }}
+              >
+                {/* Corner gradient */}
+                <div className="absolute -top-5 -right-5 w-20 h-20 rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.08),transparent)] group-hover:bg-[radial-gradient(circle,rgba(99,102,241,0.15),transparent)] transition-all duration-300" />
+
+                <div className="relative">
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-[#818cf8]">
+                      {icons[project.icon]}
+                    </div>
+                    {hasDetails && (
+                      <motion.svg
+                        animate={{ rotate: isExpanded ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="w-4 h-4 text-[#64748b]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        strokeWidth={2}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </motion.svg>
+                    )}
+                  </div>
+
+                  <h3 className="text-[#f1f5f9] text-base font-bold mb-2">
+                    {project.title}
+                  </h3>
+
+                  <p className="text-[#94a3b8] text-sm leading-relaxed mb-4">
+                    {project.description}
+                  </p>
+
+                  <AnimatePresence>
+                    {isExpanded && hasDetails && (
+                      <motion.div
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="overflow-hidden"
+                      >
+                        <div className="border-t border-white/[0.06] pt-4 mb-4 space-y-3">
+                          <div>
+                            <div className="text-[#818cf8] text-xs font-semibold mb-1">
+                              Challenge
+                            </div>
+                            <p className="text-[#94a3b8] text-xs leading-relaxed">
+                              {project.challenge}
+                            </p>
+                          </div>
+                          <div>
+                            <div className="text-[#818cf8] text-xs font-semibold mb-1">
+                              Approach
+                            </div>
+                            <p className="text-[#94a3b8] text-xs leading-relaxed">
+                              {project.approach}
+                            </p>
+                          </div>
+                          <div>
+                            <div className="text-[#818cf8] text-xs font-semibold mb-1">
+                              Outcome
+                            </div>
+                            <p className="text-[#94a3b8] text-xs leading-relaxed">
+                              {project.outcome}
+                            </p>
+                          </div>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+
+                  <div className="flex flex-wrap gap-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="text-[#64748b] text-xs bg-white/[0.04] px-2 py-1 rounded"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-
-                <h3 className="text-[#f1f5f9] text-base font-bold mb-2">
-                  {project.title}
-                </h3>
-
-                <p className="text-[#94a3b8] text-sm leading-relaxed mb-4">
-                  {project.description}
-                </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {project.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="text-[#64748b] text-xs bg-white/[0.04] px-2 py-1 rounded"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          ))}
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </section>
