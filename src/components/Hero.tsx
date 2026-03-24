@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { personalInfo, stats } from "@/data/portfolio";
+import AnimatedCounter from "./AnimatedCounter";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -34,12 +35,11 @@ export default function Hero() {
             variants={fadeUp}
             className="flex items-center gap-4 mb-6"
           >
-            {/* Profile picture placeholder */}
-            <div className="relative">
-              <div className="w-20 h-20 rounded-full bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] p-[2px]">
-                <div className="w-full h-full rounded-full bg-[#0a0a0a] flex items-center justify-center overflow-hidden">
-                  <img src="/jishnu.png" alt={personalInfo.name} className="w-full h-full object-cover" />
-                </div>
+            {/* Profile picture */}
+            <div className="relative group/avatar">
+              <div className="absolute -inset-0.5 rounded-full bg-gradient-to-br from-[#6366f1] to-[#8b5cf6] opacity-25 blur-sm group-hover/avatar:opacity-40 transition-opacity" />
+              <div className="relative w-20 h-20 rounded-full overflow-hidden">
+                <img src="/jishnu.png" alt={personalInfo.name} width={80} height={80} className="w-full h-full object-cover" />
               </div>
               {/* Status indicator */}
               <div className="absolute -bottom-0.5 -right-0.5 w-5 h-5 bg-green-500 rounded-full border-[3px] border-[#0a0a0a]" />
@@ -49,6 +49,10 @@ export default function Hero() {
               <div className="text-[#94a3b8] text-sm">Hello, I&apos;m</div>
               <div className="text-[#f1f5f9] text-lg font-semibold">
                 {personalInfo.name}
+              </div>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />
+                <span className="text-[#64748b] text-xs">{personalInfo.currentFocus}</span>
               </div>
             </div>
           </motion.div>
@@ -166,9 +170,8 @@ export default function Hero() {
             className="mt-6"
           >
             <a
-              href="https://drive.google.com/drive/folders/16DH6U40m2R5KlQItLFzB7q7RZmbdFKeJ?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/Jishnu Mohan.pdf"
+              download
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white text-sm font-medium hover:opacity-90 transition-opacity"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
@@ -195,7 +198,7 @@ export default function Hero() {
               className="flex-1 lg:flex-initial bg-white/[0.04] border border-white/[0.08] rounded-xl p-5 backdrop-blur-sm lg:min-w-[180px]"
             >
               <div className="text-[#818cf8] text-3xl font-extrabold">
-                {stat.value}
+                <AnimatedCounter value={stat.value} />
               </div>
               <div className="text-[#94a3b8] text-xs mt-1">{stat.label}</div>
             </motion.div>

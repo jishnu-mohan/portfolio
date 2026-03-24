@@ -9,6 +9,7 @@ export const personalInfo = {
   phone: "+91-8281378980",
   linkedin: "https://www.linkedin.com/in/jishnu-mohan",
   github: "https://github.com/jishnumohan",
+  currentFocus: "Building AI-powered retail workflows at Treez Inc.",
 };
 
 export const stats = [
@@ -76,6 +77,9 @@ export interface Project {
   description: string;
   technologies: string[];
   icon: string;
+  challenge?: string;
+  approach?: string;
+  outcome?: string;
 }
 
 export const projects: Project[] = [
@@ -85,6 +89,12 @@ export const projects: Project[] = [
       "Event-driven microservices platform automating invoice processing and catalog onboarding with AI agent orchestration.",
     technologies: ["Python", "EventBridge", "AWS Cognito", "SQS", "LLM"],
     icon: "diamond",
+    challenge:
+      "Manual invoice processing and catalog onboarding were slow and error-prone, requiring significant human effort to maintain product data quality.",
+    approach:
+      "Built event-driven microservices with AI agent orchestration — LLM-based description agents and vision-driven image discovery agents integrated into catalog workflows.",
+    outcome:
+      "Automated product content generation end-to-end, significantly reducing manual effort and improving catalog data consistency across the platform.",
   },
   {
     title: "Product Collection Service",
@@ -92,6 +102,12 @@ export const projects: Project[] = [
       "Distributed event processing system handling 5K+ events/day with idempotent consumers and 99.9%+ message processing reliability.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "EventBridge", "SQS", "PostgreSQL"],
     icon: "zap",
+    challenge:
+      "Product collections needed to stay in sync across distributed services, with strict reliability requirements and no tolerance for duplicate processing.",
+    approach:
+      "Designed an event-driven architecture using AWS EventBridge and SQS with idempotent consumers, ensuring exactly-once processing semantics.",
+    outcome:
+      "Achieved 99.9%+ message processing reliability handling 5K+ events/day across the distributed system.",
   },
   {
     title: "Event Registry",
@@ -99,6 +115,12 @@ export const projects: Project[] = [
       "Hackathon project turned shared platform for centralized event schema discovery and validation across 10+ services.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "PostgreSQL"],
     icon: "layers",
+    challenge:
+      "With 10+ services publishing events, there was no central way to discover event schemas or validate payloads, leading to integration issues.",
+    approach:
+      "Started as a hackathon project — built a centralized registry for event schema discovery and validation that services could integrate with.",
+    outcome:
+      "Adopted across the organization as a shared platform, enabling reliable event-driven communication between 10+ services.",
   },
   {
     title: "OTT Backend Platform",
@@ -106,6 +128,12 @@ export const projects: Project[] = [
       "Serverless backend powering 3 OTT applications with REST and GraphQL APIs, handling millions of requests per month.",
     technologies: ["AWS Lambda", "AWS Cognito", "GraphQL", "DynamoDB"],
     icon: "tv",
+    challenge:
+      "Three OTT streaming applications needed a unified, scalable backend capable of handling millions of monthly requests with minimal operational overhead.",
+    approach:
+      "Built a fully serverless architecture using AWS Lambda, API Gateway, and DynamoDB with both REST and GraphQL APIs for flexible content delivery.",
+    outcome:
+      "Successfully serving millions of requests per month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
   },
 ];
 
@@ -182,6 +210,44 @@ export const skillCategories: SkillCategory[] = [
     textColor: "#f9a8d4",
     bgColor: "rgba(236,72,153,0.08)",
     skills: ["LLM Integration", "AI Agents", "MCP"],
+  },
+];
+
+export interface Specialization {
+  title: string;
+  description: string;
+  icon: string;
+  tags: string[];
+}
+
+export const specializations: Specialization[] = [
+  {
+    title: "Distributed Systems",
+    description:
+      "Designing resilient, event-driven architectures that process thousands of events daily with 99.9%+ reliability.",
+    icon: "network",
+    tags: ["EventBridge", "SQS", "Microservices"],
+  },
+  {
+    title: "Cloud Infrastructure",
+    description:
+      "Building and operating production systems on AWS with 15+ services, from Lambda to CloudFront.",
+    icon: "cloud",
+    tags: ["AWS", "Lambda", "DynamoDB", "S3"],
+  },
+  {
+    title: "AI / LLM Integration",
+    description:
+      "Integrating LLM-based agents and vision models into production workflows for content automation.",
+    icon: "ai",
+    tags: ["LLM", "AI Agents", "MCP", "Python"],
+  },
+  {
+    title: "Backend APIs",
+    description:
+      "Building scalable REST and GraphQL APIs serving millions of requests, with CI/CD and zero-downtime deployments.",
+    icon: "api",
+    tags: ["REST", "GraphQL", "Node.js", "TypeScript"],
   },
 ];
 
