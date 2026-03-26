@@ -77,6 +77,7 @@ export interface Project {
   description: string;
   technologies: string[];
   icon: string;
+  github?: string;
   challenge?: string;
   approach?: string;
   outcome?: string;
@@ -134,6 +135,22 @@ export const projects: Project[] = [
       "Built a fully serverless architecture using AWS Lambda, API Gateway, and DynamoDB with both REST and GraphQL APIs for flexible content delivery.",
     outcome:
       "Successfully serving millions of requests per month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
+  },
+  {
+    title: "COWIN Vaccine Slot Checker",
+    description:
+      "Vaccine slot availability checker that monitors the COWIN API and publishes real-time slot availability updates to a Telegram channel.",
+    technologies: ["Node.js", "Raspberry Pi", "Telegram API"],
+    icon: "monitor",
+    github: "https://github.com/jishnu-mohan/cowin-vaccine-availability-checker",
+  },
+  {
+    title: "s3-dir-utils",
+    description:
+      "Published npm package that retrieves the file structure of AWS S3 buckets and returns it in a structured JSON format.",
+    technologies: ["Node.js", "npm", "AWS S3"],
+    icon: "package",
+    github: "https://github.com/jishnu-mohan/s3-dir-utils",
   },
 ];
 
