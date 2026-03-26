@@ -65,6 +65,36 @@ const icons: Record<string, React.ReactNode> = {
       />
     </svg>
   ),
+  monitor: (
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+      />
+    </svg>
+  ),
+  package: (
+    <svg
+      className="w-6 h-6"
+      fill="none"
+      stroke="currentColor"
+      viewBox="0 0 24 24"
+      strokeWidth={1.5}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"
+      />
+    </svg>
+  ),
 };
 
 export default function Projects() {
@@ -103,10 +133,12 @@ export default function Projects() {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ delay: i * 0.1, duration: 0.5 }}
                 className={`group bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 relative overflow-hidden hover:border-white/[0.12] transition-all duration-300 ${
-                  hasDetails ? "cursor-pointer" : ""
+                  hasDetails || project.github ? "cursor-pointer" : ""
                 } ${isExpanded ? "border-white/[0.12]" : "hover:-translate-y-1"}`}
                 onClick={() => {
-                  if (hasDetails) {
+                  if (project.github) {
+                    window.open(project.github, "_blank", "noopener,noreferrer");
+                  } else if (hasDetails) {
                     setExpanded(isExpanded ? null : project.title);
                   }
                 }}
