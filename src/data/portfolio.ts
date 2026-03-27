@@ -250,7 +250,7 @@ export const specializations: Specialization[] = [
     description:
       "Building and operating production systems on AWS with 15+ services, from Lambda to CloudFront.",
     icon: "cloud",
-    tags: ["AWS", "Lambda", "DynamoDB", "S3"],
+    tags: ["AWS Lambda", "Serverless", "DynamoDB", "S3"],
   },
   {
     title: "AI / LLM Integration",
