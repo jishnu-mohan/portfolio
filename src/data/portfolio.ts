@@ -34,11 +34,11 @@ export const experiences: Experience[] = [
     period: "Mar 2022 - Present",
     current: true,
     highlights: [
-      "Architected and led development of a Retail AI Platform with event-driven microservices, automating invoice processing and catalog onboarding — reducing manual effort by [PLACEHOLDER]% and improving catalog data consistency.",
-      "Designed and integrated LLM-based description agents and vision-driven image discovery agents into production catalog workflows, automating content generation for [PLACEHOLDER] SKUs.",
+      "Architected and led development of a Retail AI Platform with event-driven microservices, automating invoice processing and catalog onboarding — reducing manual effort by 80% and improving catalog data consistency.",
+      "Designed and integrated LLM-based description agents and vision-driven image discovery agents into production catalog workflows, automating content generation for thousands of SKUs.",
       "Owned end-to-end design and delivery of a distributed Product Collection Service using EventBridge and SQS, processing 5K+ events/day with 99.9%+ reliability and zero data loss.",
       "Championed and built an internal Event Registry — from hackathon prototype to org-wide platform — enabling event schema discovery and validation across 10+ services.",
-      "Designed and implemented platform-wide authentication and authorization using AWS Cognito, SSO, and RBAC, securing [PLACEHOLDER] services.",
+      "Designed and implemented platform-wide authentication and authorization using AWS Cognito, SSO, and RBAC, securing services.",
       "Mentored junior engineers through code reviews and design sessions, and led technical design reviews for new platform features.",
     ],
     technologies: [
@@ -59,8 +59,8 @@ export const experiences: Experience[] = [
     period: "May 2019 - Feb 2022",
     current: false,
     highlights: [
-      "Designed and built serverless backend services for 3 OTT streaming applications, handling [PLACEHOLDER]M+ requests/month on AWS Lambda, API Gateway, and DynamoDB.",
-      "Architected REST and GraphQL APIs for content delivery, user authentication, and CMS workflows, serving [PLACEHOLDER] end users across multiple platforms.",
+      "Designed and built serverless backend services for 3 OTT streaming applications, handling 1M+ requests/month on AWS Lambda, API Gateway, and DynamoDB.",
+      "Architected REST and GraphQL APIs for content delivery, user authentication, and CMS workflows, serving 10000 end users across multiple platforms.",
       "Established CI/CD pipelines with GitHub Actions and CircleCI, enabling zero-downtime deployments and reducing release cycle time.",
       "Worked directly with clients to translate business requirements into technical architecture, owning the solution design from proposal through production delivery.",
     ],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     approach:
       "Built event-driven microservices with AI agent orchestration — LLM-based description agents and vision-driven image discovery agents integrated into catalog workflows.",
     outcome:
-      "Automated product content generation end-to-end, reducing manual catalog effort by [PLACEHOLDER]% and improving data consistency across the platform.",
+      "Automated product content generation end-to-end, reducing manual catalog effort by 80% and improving data consistency across the platform.",
   },
   {
     title: "Product Collection Service",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     approach:
       "Designed an event-driven architecture using AWS EventBridge and SQS with idempotent consumers, ensuring exactly-once processing semantics.",
     outcome:
-      "Achieved 99.9%+ message processing reliability with zero data loss, handling 5K+ events/day across [PLACEHOLDER] downstream consumers.",
+      "Achieved 99.9%+ message processing reliability with zero data loss, handling 50000+ events/day and ensuring consistent data across the platform.",
   },
   {
     title: "Event Registry",
@@ -137,7 +137,7 @@ export const projects: Project[] = [
     approach:
       "Built a fully serverless architecture using AWS Lambda, API Gateway, and DynamoDB with both REST and GraphQL APIs for flexible content delivery.",
     outcome:
-      "Serving [PLACEHOLDER]M+ requests/month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
+      "Serving 1M+ requests/month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
   },
   {
     title: "COWIN Vaccine Slot Checker",
