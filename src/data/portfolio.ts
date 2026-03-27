@@ -1,20 +1,20 @@
 export const personalInfo = {
   name: "Jishnu Mohan",
   initials: "JM",
-  role: "Backend Engineer",
-  headline: "Building Distributed Systems & AI-Powered Platforms",
+  role: "Senior Backend Engineer",
+  headline: "Architecting Distributed Systems & AI-Powered Platforms at Scale",
   summary:
-    "7+ years designing resilient, event-driven architectures for high-traffic SaaS platforms. Currently building AI-enabled retail products at Treez Inc.",
+    "7+ years architecting resilient, event-driven systems for high-traffic SaaS platforms. Led end-to-end design and delivery of AI-powered retail products at Treez Inc., from system design through production.",
   email: "jishnumpr@gmail.com",
   phone: "+91-8281378980",
   linkedin: "https://www.linkedin.com/in/jishnu-mohan",
   github: "https://github.com/jishnumohan",
-  currentFocus: "Building AI-powered retail workflows at Treez Inc.",
+  currentFocus: "Leading AI platform development at Treez Inc.",
 };
 
 export const stats = [
   { value: "7+", label: "Years Experience" },
-  { value: "15+", label: "AWS Services" },
+  { value: "5K+", label: "Events Processed Daily" },
   { value: "99.9%", label: "System Reliability" },
 ];
 
@@ -34,11 +34,12 @@ export const experiences: Experience[] = [
     period: "Mar 2022 - Present",
     current: true,
     highlights: [
-      "Architected a Retail AI Platform with event-driven microservices for automated invoice processing and catalog onboarding with AI agent orchestration.",
-      "Integrated LLM-based description agents and vision-driven image discovery agents into catalog workflows, automating product content generation.",
-      "Designed a distributed Product Collection Service using AWS EventBridge and SQS, processing 5K+ events/day with 99.9%+ reliability.",
-      "Built an internal Event Registry from a hackathon into a shared platform for event schema discovery across 10+ services.",
-      "Implemented secure authentication with AWS Cognito, SSO, and role-based access control across platform services.",
+      "Architected and led development of a Retail AI Platform with event-driven microservices, automating invoice processing and catalog onboarding — reducing manual effort by [PLACEHOLDER]% and improving catalog data consistency.",
+      "Designed and integrated LLM-based description agents and vision-driven image discovery agents into production catalog workflows, automating content generation for [PLACEHOLDER] SKUs.",
+      "Owned end-to-end design and delivery of a distributed Product Collection Service using EventBridge and SQS, processing 5K+ events/day with 99.9%+ reliability and zero data loss.",
+      "Championed and built an internal Event Registry — from hackathon prototype to org-wide platform — enabling event schema discovery and validation across 10+ services.",
+      "Designed and implemented platform-wide authentication and authorization using AWS Cognito, SSO, and RBAC, securing [PLACEHOLDER] services.",
+      "Mentored junior engineers through code reviews and design sessions, and led technical design reviews for new platform features.",
     ],
     technologies: [
       "TypeScript",
@@ -46,6 +47,8 @@ export const experiences: Experience[] = [
       "EventBridge",
       "SQS",
       "DynamoDB",
+      "PostgreSQL",
+      "Redis",
       "LLM",
       "Python",
     ],
@@ -56,10 +59,10 @@ export const experiences: Experience[] = [
     period: "May 2019 - Feb 2022",
     current: false,
     highlights: [
-      "Developed serverless backend services for 3 OTT applications, handling millions of requests per month using AWS Lambda, API Gateway, and DynamoDB.",
-      "Built scalable REST and GraphQL APIs for content delivery, user authentication, and CMS workflows.",
-      "Configured CI/CD pipelines with GitHub Actions and CircleCI for zero-downtime production releases.",
-      "Collaborated directly with clients to gather requirements and translate business specs into scalable solutions.",
+      "Designed and built serverless backend services for 3 OTT streaming applications, handling [PLACEHOLDER]M+ requests/month on AWS Lambda, API Gateway, and DynamoDB.",
+      "Architected REST and GraphQL APIs for content delivery, user authentication, and CMS workflows, serving [PLACEHOLDER] end users across multiple platforms.",
+      "Established CI/CD pipelines with GitHub Actions and CircleCI, enabling zero-downtime deployments and reducing release cycle time.",
+      "Worked directly with clients to translate business requirements into technical architecture, owning the solution design from proposal through production delivery.",
     ],
     technologies: [
       "Node.js",
@@ -95,7 +98,7 @@ export const projects: Project[] = [
     approach:
       "Built event-driven microservices with AI agent orchestration — LLM-based description agents and vision-driven image discovery agents integrated into catalog workflows.",
     outcome:
-      "Automated product content generation end-to-end, significantly reducing manual effort and improving catalog data consistency across the platform.",
+      "Automated product content generation end-to-end, reducing manual catalog effort by [PLACEHOLDER]% and improving data consistency across the platform.",
   },
   {
     title: "Product Collection Service",
@@ -108,7 +111,7 @@ export const projects: Project[] = [
     approach:
       "Designed an event-driven architecture using AWS EventBridge and SQS with idempotent consumers, ensuring exactly-once processing semantics.",
     outcome:
-      "Achieved 99.9%+ message processing reliability handling 5K+ events/day across the distributed system.",
+      "Achieved 99.9%+ message processing reliability with zero data loss, handling 5K+ events/day across [PLACEHOLDER] downstream consumers.",
   },
   {
     title: "Event Registry",
@@ -121,7 +124,7 @@ export const projects: Project[] = [
     approach:
       "Started as a hackathon project — built a centralized registry for event schema discovery and validation that services could integrate with.",
     outcome:
-      "Adopted across the organization as a shared platform, enabling reliable event-driven communication between 10+ services.",
+      "Adopted org-wide as the standard for event-driven integration, reducing cross-team schema mismatches and cutting integration debugging time.",
   },
   {
     title: "OTT Backend Platform",
@@ -134,7 +137,7 @@ export const projects: Project[] = [
     approach:
       "Built a fully serverless architecture using AWS Lambda, API Gateway, and DynamoDB with both REST and GraphQL APIs for flexible content delivery.",
     outcome:
-      "Successfully serving millions of requests per month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
+      "Serving [PLACEHOLDER]M+ requests/month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
   },
   {
     title: "COWIN Vaccine Slot Checker",
@@ -181,7 +184,7 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(139,92,246,0.15)",
     textColor: "#c4b5fd",
     bgColor: "rgba(139,92,246,0.08)",
-    skills: ["REST", "GraphQL", "Event-Driven", "Microservices"],
+    skills: ["REST", "GraphQL", "Event-Driven", "Microservices", "System Design"],
   },
   {
     name: "Databases",
@@ -190,7 +193,7 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(34,211,238,0.15)",
     textColor: "#a5f3fc",
     bgColor: "rgba(34,211,238,0.08)",
-    skills: ["PostgreSQL", "DynamoDB"],
+    skills: ["PostgreSQL", "DynamoDB", "Redis"],
   },
   {
     name: "Cloud (AWS)",
@@ -217,7 +220,7 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(74,222,128,0.15)",
     textColor: "#86efac",
     bgColor: "rgba(74,222,128,0.08)",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "Prometheus", "Grafana"],
+    skills: ["Docker", "Kubernetes", "GitHub Actions", "CloudWatch", "Prometheus", "Grafana"],
   },
   {
     name: "AI & Automation",
@@ -226,7 +229,7 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(236,72,153,0.15)",
     textColor: "#f9a8d4",
     bgColor: "rgba(236,72,153,0.08)",
-    skills: ["OpenClaw", "LLM Integration", "AI Agents", "MCP"],
+    skills: ["OpenClaw", "LLM Integration", "AI Agents", "Prompt Engineering", "MCP"],
   },
 ];
 
@@ -241,7 +244,7 @@ export const specializations: Specialization[] = [
   {
     title: "Distributed Systems",
     description:
-      "Designing resilient, event-driven architectures that process thousands of events daily with 99.9%+ reliability.",
+      "Designing and owning resilient, event-driven architectures at scale — from schema design and idempotent consumers to dead-letter handling and production observability.",
     icon: "network",
     tags: ["EventBridge", "SQS", "Microservices"],
   },
@@ -255,16 +258,16 @@ export const specializations: Specialization[] = [
   {
     title: "AI / LLM Integration",
     description:
-      "Integrating LLM-based agents and vision models into production workflows for content automation.",
+      "Designing and deploying LLM-based agents and vision models in production — including prompt engineering, agent orchestration, and automated content generation pipelines.",
     icon: "ai",
     tags: ["OpenClaw", "LLM", "AI Agents", "MCP", "Python"],
   },
   {
-    title: "Backend APIs",
+    title: "System Design & Technical Leadership",
     description:
-      "Building scalable REST and GraphQL APIs serving millions of requests, with CI/CD and zero-downtime deployments.",
+      "Driving end-to-end system architecture — from API design and data modeling to event-driven patterns, mentoring engineers, and leading technical design reviews.",
     icon: "api",
-    tags: ["REST", "GraphQL", "Node.js", "TypeScript"],
+    tags: ["System Design", "Architecture", "Technical Leadership", "Design Reviews"],
   },
 ];
 
