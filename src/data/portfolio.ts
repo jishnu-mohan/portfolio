@@ -226,7 +226,7 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(236,72,153,0.15)",
     textColor: "#f9a8d4",
     bgColor: "rgba(236,72,153,0.08)",
-    skills: ["LLM Integration", "AI Agents", "MCP"],
+    skills: ["OpenClaw", "LLM Integration", "AI Agents", "MCP"],
   },
 ];
 
@@ -257,7 +257,7 @@ export const specializations: Specialization[] = [
     description:
       "Integrating LLM-based agents and vision models into production workflows for content automation.",
     icon: "ai",
-    tags: ["LLM", "AI Agents", "MCP", "Python"],
+    tags: ["OpenClaw", "LLM", "AI Agents", "MCP", "Python"],
   },
   {
     title: "Backend APIs",
