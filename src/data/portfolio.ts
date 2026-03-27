@@ -14,7 +14,7 @@ export const personalInfo = {
 
 export const stats = [
   { value: "7+", label: "Years Experience" },
-  { value: "5K+", label: "Events Processed Daily" },
+  { value: "50K+", label: "Events Processed Daily" },
   { value: "99.9%", label: "System Reliability" },
 ];
 
@@ -36,7 +36,7 @@ export const experiences: Experience[] = [
     highlights: [
       "Architected and led development of a Retail AI Platform with event-driven microservices, automating invoice processing and catalog onboarding — reducing manual effort by 80% and improving catalog data consistency.",
       "Designed and integrated LLM-based description agents and vision-driven image discovery agents into production catalog workflows, automating content generation for thousands of SKUs.",
-      "Owned end-to-end design and delivery of a distributed Product Collection Service using EventBridge and SQS, processing 5K+ events/day with 99.9%+ reliability and zero data loss.",
+      "Owned end-to-end design and delivery of a distributed Product Collection Service using EventBridge and SQS, processing 50K+ events/day with 99.9%+ reliability and zero data loss.",
       "Championed and built an internal Event Registry — from hackathon prototype to org-wide platform — enabling event schema discovery and validation across 10+ services.",
       "Designed and implemented platform-wide authentication and authorization using AWS Cognito, SSO, and RBAC, securing services.",
       "Mentored junior engineers through code reviews and design sessions, and led technical design reviews for new platform features.",
@@ -103,7 +103,7 @@ export const projects: Project[] = [
   {
     title: "Product Collection Service",
     description:
-      "Distributed event processing system handling 5K+ events/day with idempotent consumers and 99.9%+ message processing reliability.",
+      "Distributed event processing system handling 50K+ events/day with idempotent consumers and 99.9%+ message processing reliability.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "EventBridge", "SQS", "PostgreSQL"],
     icon: "zap",
     challenge:
