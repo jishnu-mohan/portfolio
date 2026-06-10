@@ -140,6 +140,56 @@ export const projects: Project[] = [
       "Serving 1M+ requests/month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
   },
   {
+    title: "llm-key-validator",
+    description:
+      "Published npm + PyPI library, CLI, and GitHub Action that validates API keys for 12 LLM providers — OpenAI, Anthropic, Gemini, Groq, Mistral, and more — with zero runtime dependencies.",
+    technologies: ["TypeScript", "Node.js", "Python", "npm", "GitHub Actions"],
+    icon: "key",
+    github: "https://github.com/jishnu-mohan/llm-key-validator",
+  },
+  {
+    title: "3D Lithophane Generator",
+    description:
+      "Browser-based tool that turns any image into a 3D-printable lithophane — real-time Three.js preview with flat, curved, cylindrical, and lampshade shapes, exported as binary STL.",
+    technologies: ["React", "TypeScript", "Three.js", "Vite", "Tailwind"],
+    icon: "cube",
+    github: "https://github.com/jishnu-mohan/3d-Lithophage-Generator",
+  },
+  {
+    title: "AI Overview Blocker for Google",
+    description:
+      "Manifest V3 Chrome extension that blocks, hides, or auto-expands Google AI Overviews and Sponsored results, with zero-flash rendering and a low-CPU MutationObserver.",
+    technologies: ["JavaScript", "Chrome Extension", "Manifest V3"],
+    icon: "shield",
+    github: "https://github.com/jishnu-mohan/google-ai-blocker-and-expander",
+  },
+  {
+    title: "WikiShorts",
+    description:
+      "Automated pipeline that turns Wikipedia articles into high-retention 9:16 short-form videos — script, voiceover, sourced media, and word-aligned captions, generated end to end.",
+    technologies: ["Python", "Claude", "Whisper", "FFmpeg", "Remotion"],
+    icon: "film",
+    challenge:
+      "Producing engaging short-form video at scale is manual and slow — scripting, narration, sourcing relevant visuals, and aligning captions each take significant effort per video.",
+    approach:
+      "Built a multi-stage pipeline: Claude writes a viral script, TTS synthesizes a cinematic voiceover, per-scene Wikimedia images are vision-scored for relevance, and Whisper aligns word-level captions — every stage with a graceful fallback chain.",
+    outcome:
+      "Generates finished, captioned 9:16 shorts for YouTube, TikTok, and Reels end to end — running with premium API keys, a single key, or fully offline in mock mode.",
+  },
+  {
+    title: "Personal Expense Tracker",
+    description:
+      "Self-updating expense dashboard that parses Gmail transaction alerts and bank/credit-card PDF statements into a private local SQLite store, served over a home tailnet.",
+    technologies: ["Python", "Gmail API", "SQLite", "launchd"],
+    icon: "chart",
+    challenge:
+      "Tracking spending across multiple banks and cards meant manually reconciling alert emails and password-protected PDF statements — tedious and easy to fall behind on.",
+    approach:
+      "Built an hourly automation that polls the Gmail API, parses transaction emails and decrypts/parses PDF statements, and writes idempotently to a local SQLite database before regenerating an HTML dashboard.",
+    outcome:
+      "A private, hands-off dashboard that refreshes every hour and is served on the home tailnet — ~1,500 lines of Python, read-only mail access, and no data ever leaving the machine.",
+  },
+  {
     title: "COWIN Vaccine Slot Checker",
     description:
       "Vaccine slot availability checker that monitors the COWIN API and publishes real-time slot availability updates to a Telegram channel.",
