@@ -180,33 +180,23 @@ export default function Projects() {
       <div className="absolute -bottom-16 -left-10 w-[250px] h-[250px] rounded-full bg-[radial-gradient(circle,rgba(139,92,246,0.06),transparent_70%)]" />
 
       <div className="max-w-6xl mx-auto px-6 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <div className="text-[#818cf8] text-xs tracking-[3px] font-medium mb-2">
             WORK
           </div>
           <h2 className="text-3xl font-bold text-[#f1f5f9]">
             Featured Projects
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          {projects.map((project, i) => {
+          {projects.map((project) => {
             const isExpanded = expanded === project.title;
             const hasDetails = project.challenge && project.approach && project.outcome;
 
             return (
-              <motion.div
+              <div
                 key={project.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1, duration: 0.5 }}
                 className={`group bg-white/[0.03] border border-white/[0.06] rounded-xl p-6 relative overflow-hidden hover:border-white/[0.12] transition-all duration-300 ${
                   hasDetails || project.github ? "cursor-pointer" : ""
                 } ${isExpanded ? "border-white/[0.12]" : "hover:-translate-y-1"}`}
@@ -306,7 +296,7 @@ export default function Projects() {
                     ))}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>
