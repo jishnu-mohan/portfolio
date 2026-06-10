@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { personalInfo } from "@/data/portfolio";
 
 export default function Contact() {
@@ -9,27 +8,16 @@ export default function Contact() {
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.06),transparent_70%)]" />
 
       <div className="max-w-4xl mx-auto px-6 relative text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-        >
+        <div>
           <div className="text-[#818cf8] text-xs tracking-[3px] font-medium mb-2">
             GET IN TOUCH
           </div>
           <h2 className="text-3xl font-bold text-[#f1f5f9] mb-3">
             Let&apos;s Work Together
           </h2>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ delay: 0.15, duration: 0.5 }}
-          className="flex flex-col sm:flex-row justify-center gap-4"
-        >
+        <div className="flex flex-col sm:flex-row justify-center gap-4">
           <a
             href={`mailto:${personalInfo.email}`}
             className="flex items-center justify-center gap-3 bg-white/[0.04] border border-white/[0.08] rounded-xl px-6 py-4 text-[#e2e8f0] text-sm font-medium hover:bg-white/[0.08] transition-colors"
@@ -85,7 +73,7 @@ export default function Contact() {
             </svg>
             {personalInfo.phone}
           </a>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
