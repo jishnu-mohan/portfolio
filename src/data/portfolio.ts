@@ -80,6 +80,7 @@ export interface Project {
   description: string;
   technologies: string[];
   icon: string;
+  tag?: string;
   github?: string;
   challenge?: string;
   approach?: string;
@@ -93,6 +94,7 @@ export const projects: Project[] = [
       "Event-driven microservices platform automating invoice processing and catalog onboarding with AI agent orchestration.",
     technologies: ["Python", "EventBridge", "AWS Cognito", "SQS", "LLM"],
     icon: "diamond",
+    tag: "Production",
     challenge:
       "Manual invoice processing and catalog onboarding were slow and error-prone, requiring significant human effort to maintain product data quality.",
     approach:
@@ -106,6 +108,7 @@ export const projects: Project[] = [
       "Distributed event processing system handling 50K+ events/day with idempotent consumers and 99.9%+ message processing reliability.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "EventBridge", "SQS", "PostgreSQL"],
     icon: "zap",
+    tag: "Production",
     challenge:
       "Product collections needed to stay in sync across distributed services, with strict reliability requirements and no tolerance for duplicate processing.",
     approach:
@@ -119,6 +122,7 @@ export const projects: Project[] = [
       "Hackathon project turned shared platform for centralized event schema discovery and validation across 10+ services.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "PostgreSQL"],
     icon: "layers",
+    tag: "Internal Platform",
     challenge:
       "With 10+ services publishing events, there was no central way to discover event schemas or validate payloads, leading to integration issues.",
     approach:
@@ -132,6 +136,7 @@ export const projects: Project[] = [
       "Serverless backend powering 3 OTT applications with REST and GraphQL APIs, handling millions of requests per month.",
     technologies: ["AWS Lambda", "AWS Cognito", "GraphQL", "DynamoDB"],
     icon: "tv",
+    tag: "Production",
     challenge:
       "Three OTT streaming applications needed a unified, scalable backend capable of handling millions of monthly requests with minimal operational overhead.",
     approach:
@@ -145,6 +150,7 @@ export const projects: Project[] = [
       "Published npm + PyPI library, CLI, and GitHub Action that validates API keys for 12 LLM providers — OpenAI, Anthropic, Gemini, Groq, Mistral, and more — with zero runtime dependencies.",
     technologies: ["TypeScript", "Node.js", "Python", "npm", "GitHub Actions"],
     icon: "key",
+    tag: "npm Package",
     github: "https://github.com/jishnu-mohan/llm-key-validator",
   },
   {
@@ -153,6 +159,7 @@ export const projects: Project[] = [
       "Browser-based tool that turns any image into a 3D-printable lithophane — real-time Three.js preview with flat, curved, cylindrical, and lampshade shapes, exported as binary STL.",
     technologies: ["React", "TypeScript", "Three.js", "Vite", "Tailwind"],
     icon: "cube",
+    tag: "Web App",
     github: "https://github.com/jishnu-mohan/3d-Lithophage-Generator",
   },
   {
@@ -161,6 +168,7 @@ export const projects: Project[] = [
       "Manifest V3 Chrome extension that blocks, hides, or auto-expands Google AI Overviews and Sponsored results, with zero-flash rendering and a low-CPU MutationObserver.",
     technologies: ["JavaScript", "Chrome Extension", "Manifest V3"],
     icon: "shield",
+    tag: "Chrome Extension",
     github: "https://github.com/jishnu-mohan/google-ai-blocker-and-expander",
   },
   {
@@ -169,6 +177,7 @@ export const projects: Project[] = [
       "Automated pipeline that turns Wikipedia articles into high-retention 9:16 short-form videos — script, voiceover, sourced media, and word-aligned captions, generated end to end.",
     technologies: ["Python", "Claude", "Whisper", "FFmpeg", "Remotion"],
     icon: "film",
+    tag: "Automation",
     challenge:
       "Producing engaging short-form video at scale is manual and slow — scripting, narration, sourcing relevant visuals, and aligning captions each take significant effort per video.",
     approach:
@@ -182,6 +191,7 @@ export const projects: Project[] = [
       "Self-updating expense dashboard that parses Gmail transaction alerts and bank/credit-card PDF statements into a private local SQLite store, served over a home tailnet.",
     technologies: ["Python", "Gmail API", "SQLite", "launchd"],
     icon: "chart",
+    tag: "Automation",
     challenge:
       "Tracking spending across multiple banks and cards meant manually reconciling alert emails and password-protected PDF statements — tedious and easy to fall behind on.",
     approach:
@@ -195,6 +205,7 @@ export const projects: Project[] = [
       "Vaccine slot availability checker that monitors the COWIN API and publishes real-time slot availability updates to a Telegram channel.",
     technologies: ["Node.js", "Raspberry Pi", "Telegram API"],
     icon: "monitor",
+    tag: "Telegram Bot",
     github: "https://github.com/jishnu-mohan/cowin-vaccine-availability-checker",
   },
   {
@@ -203,6 +214,7 @@ export const projects: Project[] = [
       "Published npm package that retrieves the file structure of AWS S3 buckets and returns it in a structured JSON format.",
     technologies: ["Node.js", "npm", "AWS S3"],
     icon: "package",
+    tag: "npm Package",
     github: "https://github.com/jishnu-mohan/s3-dir-utils",
   },
 ];

@@ -226,19 +226,26 @@ export default function Projects() {
                     <div className="text-[#818cf8]">
                       {icons[project.icon]}
                     </div>
-                    {hasDetails && (
-                      <motion.svg
-                        animate={{ rotate: isExpanded ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="w-4 h-4 text-[#64748b]"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        strokeWidth={2}
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                      </motion.svg>
-                    )}
+                    <div className="flex items-center gap-2">
+                      {project.tag && (
+                        <span className="text-[10px] font-medium tracking-wide uppercase px-2 py-1 rounded-full bg-[#818cf8]/10 text-[#a5b4fc] border border-[#818cf8]/15 whitespace-nowrap">
+                          {project.tag}
+                        </span>
+                      )}
+                      {hasDetails && (
+                        <motion.svg
+                          animate={{ rotate: isExpanded ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                          className="w-4 h-4 text-[#64748b]"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          strokeWidth={2}
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                        </motion.svg>
+                      )}
+                    </div>
                   </div>
 
                   <h3 className="text-[#f1f5f9] text-base font-bold mb-2">
