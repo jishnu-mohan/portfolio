@@ -161,18 +161,27 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Download Resume */}
+          {/* CTAs */}
           <motion.div
             custom={5}
             initial="hidden"
             animate="visible"
             variants={fadeUp}
-            className="mt-6"
+            className="mt-6 flex flex-wrap items-center gap-3"
           >
+            <a
+              href="#projects"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white text-sm font-medium hover:opacity-90 transition-opacity"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75L12 3l8.25 3.75M3.75 6.75v10.5L12 21l8.25-3.75V6.75M3.75 6.75L12 10.5l8.25-3.75" />
+              </svg>
+              View My Projects
+            </a>
             <a
               href="/Jishnu Mohan.pdf"
               download
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#8b5cf6] text-white text-sm font-medium hover:opacity-90 transition-opacity"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-white/[0.06] border border-white/[0.08] text-[#e2e8f0] text-sm font-medium hover:bg-white/[0.1] transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />

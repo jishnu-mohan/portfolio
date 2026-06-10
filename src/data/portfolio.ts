@@ -80,6 +80,7 @@ export interface Project {
   description: string;
   technologies: string[];
   icon: string;
+  tag?: string;
   github?: string;
   challenge?: string;
   approach?: string;
@@ -93,6 +94,7 @@ export const projects: Project[] = [
       "Event-driven microservices platform automating invoice processing and catalog onboarding with AI agent orchestration.",
     technologies: ["Python", "EventBridge", "AWS Cognito", "SQS", "LLM"],
     icon: "diamond",
+    tag: "Production",
     challenge:
       "Manual invoice processing and catalog onboarding were slow and error-prone, requiring significant human effort to maintain product data quality.",
     approach:
@@ -106,6 +108,7 @@ export const projects: Project[] = [
       "Distributed event processing system handling 50K+ events/day with idempotent consumers and 99.9%+ message processing reliability.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "EventBridge", "SQS", "PostgreSQL"],
     icon: "zap",
+    tag: "Production",
     challenge:
       "Product collections needed to stay in sync across distributed services, with strict reliability requirements and no tolerance for duplicate processing.",
     approach:
@@ -119,6 +122,7 @@ export const projects: Project[] = [
       "Hackathon project turned shared platform for centralized event schema discovery and validation across 10+ services.",
     technologies: ["TypeScript", "AWS Lambda", "Serverless", "PostgreSQL"],
     icon: "layers",
+    tag: "Internal Platform",
     challenge:
       "With 10+ services publishing events, there was no central way to discover event schemas or validate payloads, leading to integration issues.",
     approach:
@@ -132,6 +136,7 @@ export const projects: Project[] = [
       "Serverless backend powering 3 OTT applications with REST and GraphQL APIs, handling millions of requests per month.",
     technologies: ["AWS Lambda", "AWS Cognito", "GraphQL", "DynamoDB"],
     icon: "tv",
+    tag: "Production",
     challenge:
       "Three OTT streaming applications needed a unified, scalable backend capable of handling millions of monthly requests with minimal operational overhead.",
     approach:
@@ -140,11 +145,67 @@ export const projects: Project[] = [
       "Serving 1M+ requests/month across 3 OTT applications with zero-downtime deployments via CI/CD pipelines.",
   },
   {
+    title: "llm-key-validator",
+    description:
+      "Published npm + PyPI library, CLI, and GitHub Action that validates API keys for 12 LLM providers — OpenAI, Anthropic, Gemini, Groq, Mistral, and more — with zero runtime dependencies.",
+    technologies: ["TypeScript", "Node.js", "Python", "npm", "GitHub Actions"],
+    icon: "key",
+    tag: "npm Package",
+    github: "https://github.com/jishnu-mohan/llm-key-validator",
+  },
+  {
+    title: "3D Lithophane Generator",
+    description:
+      "Browser-based tool that turns any image into a 3D-printable lithophane — real-time Three.js preview with flat, curved, cylindrical, and lampshade shapes, exported as binary STL.",
+    technologies: ["React", "TypeScript", "Three.js", "Vite", "Tailwind"],
+    icon: "cube",
+    tag: "Web App",
+    github: "https://github.com/jishnu-mohan/3d-Lithophage-Generator",
+  },
+  {
+    title: "AI Overview Blocker for Google",
+    description:
+      "Manifest V3 Chrome extension that blocks, hides, or auto-expands Google AI Overviews and Sponsored results, with zero-flash rendering and a low-CPU MutationObserver.",
+    technologies: ["JavaScript", "Chrome Extension", "Manifest V3"],
+    icon: "shield",
+    tag: "Chrome Extension",
+    github: "https://github.com/jishnu-mohan/google-ai-blocker-and-expander",
+  },
+  {
+    title: "WikiShorts",
+    description:
+      "Automated pipeline that turns Wikipedia articles into high-retention 9:16 short-form videos — script, voiceover, sourced media, and word-aligned captions, generated end to end.",
+    technologies: ["Python", "Claude", "Whisper", "FFmpeg", "Remotion"],
+    icon: "film",
+    tag: "Automation",
+    challenge:
+      "Producing engaging short-form video at scale is manual and slow — scripting, narration, sourcing relevant visuals, and aligning captions each take significant effort per video.",
+    approach:
+      "Built a multi-stage pipeline: Claude writes a viral script, TTS synthesizes a cinematic voiceover, per-scene Wikimedia images are vision-scored for relevance, and Whisper aligns word-level captions — every stage with a graceful fallback chain.",
+    outcome:
+      "Generates finished, captioned 9:16 shorts for YouTube, TikTok, and Reels end to end — running with premium API keys, a single key, or fully offline in mock mode.",
+  },
+  {
+    title: "Personal Expense Tracker",
+    description:
+      "Self-updating expense dashboard that parses Gmail transaction alerts and bank/credit-card PDF statements into a private local SQLite store, served over a home tailnet.",
+    technologies: ["Python", "Gmail API", "SQLite", "launchd"],
+    icon: "chart",
+    tag: "Automation",
+    challenge:
+      "Tracking spending across multiple banks and cards meant manually reconciling alert emails and password-protected PDF statements — tedious and easy to fall behind on.",
+    approach:
+      "Built an hourly automation that polls the Gmail API, parses transaction emails and decrypts/parses PDF statements, and writes idempotently to a local SQLite database before regenerating an HTML dashboard.",
+    outcome:
+      "A private, hands-off dashboard that refreshes every hour and is served on the home tailnet — ~1,500 lines of Python, read-only mail access, and no data ever leaving the machine.",
+  },
+  {
     title: "COWIN Vaccine Slot Checker",
     description:
       "Vaccine slot availability checker that monitors the COWIN API and publishes real-time slot availability updates to a Telegram channel.",
     technologies: ["Node.js", "Raspberry Pi", "Telegram API"],
     icon: "monitor",
+    tag: "Telegram Bot",
     github: "https://github.com/jishnu-mohan/cowin-vaccine-availability-checker",
   },
   {
@@ -153,6 +214,7 @@ export const projects: Project[] = [
       "Published npm package that retrieves the file structure of AWS S3 buckets and returns it in a structured JSON format.",
     technologies: ["Node.js", "npm", "AWS S3"],
     icon: "package",
+    tag: "npm Package",
     github: "https://github.com/jishnu-mohan/s3-dir-utils",
   },
 ];
@@ -184,7 +246,13 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(139,92,246,0.15)",
     textColor: "#c4b5fd",
     bgColor: "rgba(139,92,246,0.08)",
-    skills: ["REST", "GraphQL", "Event-Driven", "Microservices", "System Design"],
+    skills: [
+      "REST APIs",
+      "GraphQL",
+      "Event-Driven",
+      "Microservices",
+      "System Design",
+    ],
   },
   {
     name: "Databases",
@@ -207,10 +275,12 @@ export const skillCategories: SkillCategory[] = [
       "EventBridge",
       "SQS",
       "API Gateway",
-      "S3",
       "CloudFront",
+      "Route 53",
+      "S3",
       "Cognito",
       "IAM",
+      "SSM Parameter Store",
     ],
   },
   {
@@ -220,7 +290,25 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(74,222,128,0.15)",
     textColor: "#86efac",
     bgColor: "rgba(74,222,128,0.08)",
-    skills: ["Docker", "Kubernetes", "GitHub Actions", "CloudWatch", "Prometheus", "Grafana"],
+    skills: [
+      "Docker",
+      "Kubernetes",
+      "GitHub Actions",
+      "GitLab CI",
+      "CloudWatch",
+      "Grafana",
+      "Prometheus",
+      "APM",
+    ],
+  },
+  {
+    name: "Infrastructure as Code",
+    icon: "IaC",
+    color: "rgba(234,179,8,0.12)",
+    borderColor: "rgba(234,179,8,0.18)",
+    textColor: "#fcd34d",
+    bgColor: "rgba(234,179,8,0.08)",
+    skills: ["Terraform", "CloudFormation", "Serverless Framework"],
   },
   {
     name: "AI & Automation",
@@ -229,7 +317,16 @@ export const skillCategories: SkillCategory[] = [
     borderColor: "rgba(236,72,153,0.15)",
     textColor: "#f9a8d4",
     bgColor: "rgba(236,72,153,0.08)",
-    skills: ["OpenClaw", "LLM Integration", "AI Agents", "Prompt Engineering", "MCP"],
+    skills: [
+      "LLM Integration",
+      "AI Agents",
+      "Orchestrator Agents",
+      "Prompt Engineering",
+      "MCP Servers",
+      "Claude Code",
+      "Claude Skills",
+      "Plugins",
+    ],
   },
 ];
 
