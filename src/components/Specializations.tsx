@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { specializations } from "@/data/portfolio";
 
 const icons: Record<string, React.ReactNode> = {
@@ -30,29 +29,19 @@ export default function Specializations() {
   return (
     <section className="py-20 relative">
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <div className="text-[#818cf8] text-xs tracking-[3px] font-medium mb-2">
             WHAT I DO
           </div>
           <h2 className="text-3xl font-bold text-[#f1f5f9]">
             Core Specializations
           </h2>
-        </motion.div>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {specializations.map((spec, i) => (
-            <motion.div
+          {specializations.map((spec) => (
+            <div
               key={spec.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
               className="bg-white/[0.03] border border-white/[0.06] rounded-xl p-5 hover:border-white/[0.12] transition-colors"
             >
               <div className="text-[#818cf8] mb-3">{icons[spec.icon]}</div>
@@ -72,7 +61,7 @@ export default function Specializations() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

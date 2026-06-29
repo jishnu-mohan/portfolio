@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { experiences } from "@/data/portfolio";
 
 export default function Experience() {
@@ -9,32 +8,22 @@ export default function Experience() {
       <div className="absolute top-1/2 -right-20 w-[300px] h-[300px] rounded-full bg-[radial-gradient(circle,rgba(99,102,241,0.06),transparent_70%)]" />
 
       <div className="max-w-4xl mx-auto px-6 relative">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="mb-12"
-        >
+        <div className="mb-12">
           <div className="text-[#818cf8] text-xs tracking-[3px] font-medium mb-2">
             CAREER
           </div>
           <h2 className="text-3xl font-bold text-[#f1f5f9]">
             Work Experience
           </h2>
-        </motion.div>
+        </div>
 
         <div className="relative pl-8">
           {/* Timeline line */}
           <div className="absolute left-[7px] top-2 bottom-2 w-0.5 bg-gradient-to-b from-[#6366f1] to-[rgba(99,102,241,0.1)] rounded-full" />
 
           {experiences.map((exp, i) => (
-            <motion.div
+            <div
               key={exp.company}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ delay: i * 0.15, duration: 0.5 }}
               className={`relative ${
                 i < experiences.length - 1 ? "mb-8" : ""
               }`}
@@ -88,7 +77,7 @@ export default function Experience() {
                   ))}
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
