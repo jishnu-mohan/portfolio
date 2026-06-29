@@ -34,10 +34,10 @@ export const experiences: Experience[] = [
     period: "Mar 2022 - Present",
     current: true,
     highlights: [
-      "Architected and led development of a Retail AI Platform with event-driven microservices, automating invoice processing and catalog onboarding — reducing manual effort by 80% and improving catalog data consistency.",
+      "Architected and led development of a Retail AI Platform with event-driven microservices, automating invoice processing and catalog onboarding, reducing manual effort by 80% and improving catalog data consistency.",
       "Designed and integrated LLM-based description agents and vision-driven image discovery agents into production catalog workflows, automating content generation for thousands of SKUs.",
       "Owned end-to-end design and delivery of a distributed Product Collection Service using EventBridge and SQS, processing 50K+ events/day with 99.9%+ reliability and zero data loss.",
-      "Championed and built an internal Event Registry — from hackathon prototype to org-wide platform — enabling event schema discovery and validation across 10+ services.",
+      "Championed and built an internal Event Registry, from hackathon prototype to org-wide platform, enabling event schema discovery and validation across 10+ services.",
       "Designed and implemented platform-wide authentication and authorization using AWS Cognito, SSO, and RBAC, securing services.",
       "Mentored junior engineers through code reviews and design sessions, and led technical design reviews for new platform features.",
     ],
@@ -98,7 +98,7 @@ export const projects: Project[] = [
     challenge:
       "Manual invoice processing and catalog onboarding were slow and error-prone, requiring significant human effort to maintain product data quality.",
     approach:
-      "Built event-driven microservices with AI agent orchestration — LLM-based description agents and vision-driven image discovery agents integrated into catalog workflows.",
+      "Built event-driven microservices with AI agent orchestration, LLM-based description agents and vision-driven image discovery agents integrated into catalog workflows.",
     outcome:
       "Automated product content generation end-to-end, reducing manual catalog effort by 80% and improving data consistency across the platform.",
   },
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     challenge:
       "With 10+ services publishing events, there was no central way to discover event schemas or validate payloads, leading to integration issues.",
     approach:
-      "Started as a hackathon project — built a centralized registry for event schema discovery and validation that services could integrate with.",
+      "Started as a hackathon project, built a centralized registry for event schema discovery and validation that services could integrate with.",
     outcome:
       "Adopted org-wide as the standard for event-driven integration, reducing cross-team schema mismatches and cutting integration debugging time.",
   },
@@ -147,7 +147,7 @@ export const projects: Project[] = [
   {
     title: "llm-key-validator",
     description:
-      "Published npm + PyPI library, CLI, and GitHub Action that validates API keys for 12 LLM providers — OpenAI, Anthropic, Gemini, Groq, Mistral, and more — with zero runtime dependencies.",
+      "Published npm + PyPI library, CLI, and GitHub Action that validates API keys for 12 LLM providers, OpenAI, Anthropic, Gemini, Groq, Mistral, and more, with zero runtime dependencies.",
     technologies: ["TypeScript", "Node.js", "Python", "npm", "GitHub Actions"],
     icon: "key",
     tag: "npm Package",
@@ -156,7 +156,7 @@ export const projects: Project[] = [
   {
     title: "3D Lithophane Generator",
     description:
-      "Browser-based tool that turns any image into a 3D-printable lithophane — real-time Three.js preview with flat, curved, cylindrical, and lampshade shapes, exported as binary STL.",
+      "Browser-based tool that turns any image into a 3D-printable lithophane, real-time Three.js preview with flat, curved, cylindrical, and lampshade shapes, exported as binary STL.",
     technologies: ["React", "TypeScript", "Three.js", "Vite", "Tailwind"],
     icon: "cube",
     tag: "Web App",
@@ -174,16 +174,16 @@ export const projects: Project[] = [
   {
     title: "WikiShorts",
     description:
-      "Automated pipeline that turns Wikipedia articles into high-retention 9:16 short-form videos — script, voiceover, sourced media, and word-aligned captions, generated end to end.",
+      "Automated pipeline that turns Wikipedia articles into high-retention 9:16 short-form videos, script, voiceover, sourced media, and word-aligned captions, generated end to end.",
     technologies: ["Python", "Claude", "Whisper", "FFmpeg", "Remotion"],
     icon: "film",
     tag: "Automation",
     challenge:
-      "Producing engaging short-form video at scale is manual and slow — scripting, narration, sourcing relevant visuals, and aligning captions each take significant effort per video.",
+      "Producing engaging short-form video at scale is manual and slow, scripting, narration, sourcing relevant visuals, and aligning captions each take significant effort per video.",
     approach:
-      "Built a multi-stage pipeline: Claude writes a viral script, TTS synthesizes a cinematic voiceover, per-scene Wikimedia images are vision-scored for relevance, and Whisper aligns word-level captions — every stage with a graceful fallback chain.",
+      "Built a multi-stage pipeline: Claude writes a viral script, TTS synthesizes a cinematic voiceover, per-scene Wikimedia images are vision-scored for relevance, and Whisper aligns word-level captions, every stage with a graceful fallback chain.",
     outcome:
-      "Generates finished, captioned 9:16 shorts for YouTube, TikTok, and Reels end to end — running with premium API keys, a single key, or fully offline in mock mode.",
+      "Generates finished, captioned 9:16 shorts for YouTube, TikTok, and Reels end to end, running with premium API keys, a single key, or fully offline in mock mode.",
   },
   {
     title: "Personal Expense Tracker",
@@ -193,11 +193,11 @@ export const projects: Project[] = [
     icon: "chart",
     tag: "Automation",
     challenge:
-      "Tracking spending across multiple banks and cards meant manually reconciling alert emails and password-protected PDF statements — tedious and easy to fall behind on.",
+      "Tracking spending across multiple banks and cards meant manually reconciling alert emails and password-protected PDF statements, tedious and easy to fall behind on.",
     approach:
       "Built an hourly automation that polls the Gmail API, parses transaction emails and decrypts/parses PDF statements, and writes idempotently to a local SQLite database before regenerating an HTML dashboard.",
     outcome:
-      "A private, hands-off dashboard that refreshes every hour and is served on the home tailnet — ~1,500 lines of Python, read-only mail access, and no data ever leaving the machine.",
+      "A private, hands-off dashboard that refreshes every hour and is served on the home tailnet, ~1,500 lines of Python, read-only mail access, and no data ever leaving the machine.",
   },
   {
     title: "COWIN Vaccine Slot Checker",
@@ -341,7 +341,7 @@ export const specializations: Specialization[] = [
   {
     title: "Distributed Systems",
     description:
-      "Designing and owning resilient, event-driven architectures at scale — from schema design and idempotent consumers to dead-letter handling and production observability.",
+      "Designing and owning resilient, event-driven architectures at scale, from schema design and idempotent consumers to dead-letter handling and production observability.",
     icon: "network",
     tags: ["EventBridge", "SQS", "Microservices"],
   },
@@ -355,14 +355,14 @@ export const specializations: Specialization[] = [
   {
     title: "AI / LLM Integration",
     description:
-      "Designing and deploying LLM-based agents and vision models in production — including prompt engineering, agent orchestration, and automated content generation pipelines.",
+      "Designing and deploying LLM-based agents and vision models in production, including prompt engineering, agent orchestration, and automated content generation pipelines.",
     icon: "ai",
     tags: ["OpenClaw", "LLM", "AI Agents", "MCP", "Python"],
   },
   {
     title: "System Design & Technical Leadership",
     description:
-      "Driving end-to-end system architecture — from API design and data modeling to event-driven patterns, mentoring engineers, and leading technical design reviews.",
+      "Driving end-to-end system architecture, from API design and data modeling to event-driven patterns, mentoring engineers, and leading technical design reviews.",
     icon: "api",
     tags: ["System Design", "Architecture", "Technical Leadership", "Design Reviews"],
   },
